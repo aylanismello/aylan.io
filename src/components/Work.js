@@ -4,8 +4,12 @@ import bossafy from '../images/bossafy_portfolio_1.png';
 
 const WorkPiece = ({ title, description, img, href }) => (
   <div className="WorkPiece">
-    <h2 className="major">{title}</h2>
-    <h3>{description}</h3>
+    <div className="WorkPiece-headers">
+      <a href={href} target="_blank">
+        <h2 className="major">{title}</h2>
+      </a>
+      <h3>{description}</h3>
+    </div>
     <span className="image main">
       <a href={href} target="_blank">
         <img src={img} alt="" />
@@ -26,7 +30,18 @@ const Work = ({ article, articleTimeout, imgSrc, close }) => (
     <p>
       I have a passion for developing full stack web applications with whatever
       technology fits the app. Here's a short portfolio of my favorite work. You
-      could also skip ahead to my LinkedIn or resume.
+      could also skip ahead to my{' '}
+      <a target="_blank" href="https://www.linkedin.com/in/aylanmello">
+        LinkedIn
+      </a>{' '}
+      or{' '}
+      <a
+        target="_blank"
+        href="https://drive.google.com/file/d/1SJTfXlhf2IZOuuf5xK5A3-TZEZodvJ6m/view?usp=sharing"
+      >
+        resume
+      </a>
+      .
     </p>
 
     <WorkPiece

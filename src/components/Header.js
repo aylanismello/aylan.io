@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import img from '../images/yo.jpg';
 
 const tabs = [
   'Work', 'About', 'Contact'
@@ -8,7 +9,8 @@ const tabs = [
 const Header = props => (
   <header id="header" style={props.timeout ? { display: 'none' } : {}}>
     <div className="logo">
-      <span className="icon fa-diamond" />
+      <img src={img} />
+      {/* <span className="icon fa-diamond" /> */}
     </div>
     <div className="content">
       <div className="inner">
