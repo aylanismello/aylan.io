@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import img from '../images/yo.jpg';
 
 const tabs = [
-  'Work', 'About', 'Contact'
+  'Code', 'Music', 'Contact'
 ];
 
 const Header = props => (

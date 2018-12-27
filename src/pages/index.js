@@ -1,6 +1,5 @@
 import React from 'react';
 import Layout from '../components/layout';
-
 import Header from '../components/Header';
 import Main from '../components/Main';
 import Footer from '../components/Footer';
@@ -13,7 +12,7 @@ class Index extends React.Component {
       timeout: false,
       articleTimeout: false,
       article: '',
-      loading: 'is-loading',
+      loading: 'is-loading'
     };
     this.handleOpenArticle = this.handleOpenArticle.bind(this);
     this.handleCloseArticle = this.handleCloseArticle.bind(this);
@@ -42,37 +41,37 @@ class Index extends React.Component {
   handleOpenArticle(article) {
     this.setState({
       isArticleVisible: !this.state.isArticleVisible,
-      article,
+      article
     });
 
     setTimeout(() => {
       this.setState({
-        timeout: !this.state.timeout,
+        timeout: !this.state.timeout
       });
     }, 325);
 
     setTimeout(() => {
       this.setState({
-        articleTimeout: !this.state.articleTimeout,
+        articleTimeout: !this.state.articleTimeout
       });
     }, 350);
   }
 
   handleCloseArticle() {
     this.setState({
-      articleTimeout: !this.state.articleTimeout,
+      articleTimeout: !this.state.articleTimeout
     });
 
     setTimeout(() => {
       this.setState({
-        timeout: !this.state.timeout,
+        timeout: !this.state.timeout
       });
     }, 325);
 
     setTimeout(() => {
       this.setState({
         isArticleVisible: !this.state.isArticleVisible,
-        article: '',
+        article: ''
       });
     }, 350);
   }

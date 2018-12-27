@@ -17,27 +17,57 @@ class Main extends React.Component {
       />
     );
 
-    return <div ref={this.props.setWrapperRef} id="main" style={this.props.timeout ? { display: 'flex' } : { display: 'none' }}>
-        <Work close={close} imgSrc={pic02} article={this.props.article} articleTimeout={this.props.articleTimeout} />
+    return (
+      <div
+        ref={this.props.setWrapperRef}
+        id="main"
+        style={this.props.timeout ? { display: 'flex' } : { display: 'none' }}
+      >
+        <Work
+          close={close}
+          imgSrc={pic02}
+          article={this.props.article}
+          articleTimeout={this.props.articleTimeout}
+        />
 
-        <article id="about" className={`${this.props.article === 'about' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{ display: 'none' }}>
+        <article
+          id="music"
+          className={`${this.props.article === 'music' ? 'active' : ''} ${
+            this.props.articleTimeout ? 'timeout' : ''
+          }`}
+          style={{ display: 'none' }}
+        >
           <h1 className="major">Music</h1>
           <h3 className="major">Production</h3>
           <p>
             My main music project at the moment is Hooded Youth, which
-            encompasses everything from Bossa Nova to bootleg remixes. Take
-            a listen.
+            encompasses everything from Bossa Nova to bootleg remixes. Take a
+            listen.
           </p>
 
-          <iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:70l5b03g3BNkElMbTgTF2v&size=detail&theme=dark" width="300" height="56" scrolling="no" frameborder="0" style={{ border: 'none', overflow: 'hidden' }} allowtransparency="true" />
+          <iframe
+            src="https://open.spotify.com/follow/1/?uri=spotify:artist:70l5b03g3BNkElMbTgTF2v&size=detail&theme=dark"
+            width="300"
+            height="56"
+            scrolling="no"
+            frameborder="0"
+            style={{ border: 'none', overflow: 'hidden' }}
+            allowtransparency="true"
+          />
 
           <h3 className="major">Mixes</h3>
           <p>
-            I also release weekly mixes under the brand <a href="http://www.burncartel.com">
-              Burn Cartel
-            </a>.
+            I also release weekly mixes under the brand{' '}
+            <a href="http://www.burncartel.com">Burn Cartel</a>.
           </p>
-          <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/293074963&color=%23444444&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true" />
+          <iframe
+            width="100%"
+            height="300"
+            scrolling="no"
+            frameborder="no"
+            allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/293074963&color=%23444444&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true"
+          />
           {/* <span className="image main">
             <img src={pic03} alt="" />
           </span> */}
@@ -53,7 +83,13 @@ class Main extends React.Component {
           {close}
         </article>
 
-        <article id="contact" className={`${this.props.article === 'contact' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{ display: 'none' }}>
+        <article
+          id="contact"
+          className={`${this.props.article === 'contact' ? 'active' : ''} ${
+            this.props.articleTimeout ? 'timeout' : ''
+          }`}
+          style={{ display: 'none' }}
+        >
           <h2 className="major">Contact</h2>
           <p>I have many personas online, but this is the real me.</p>
           <p>
@@ -98,14 +134,18 @@ class Main extends React.Component {
               </a>
             </li>*/}
             <li>
-              <a href="http://github.com/aylanismello" className="icon fa-github">
+              <a
+                href="http://github.com/aylanismello"
+                className="icon fa-github"
+              >
                 <span className="label">GitHub</span>
               </a>
             </li>
           </ul>
           {close}
         </article>
-      </div>;
+      </div>
+    );
   }
 }
 

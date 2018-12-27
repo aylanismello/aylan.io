@@ -20,13 +20,13 @@ const WorkPiece = ({ title, description, img, href }) => (
 
 const Work = ({ article, articleTimeout, imgSrc, close }) => (
   <article
-    id="work"
-    className={`${article === 'work' ? 'active' : ''} ${
+    id="code"
+    className={`${article === 'code' ? 'active' : ''} ${
       articleTimeout ? 'timeout' : ''
     }`}
     style={{ display: 'none' }}
   >
-    <h1 className="major">Work</h1>
+    <h1 className="major">Code</h1>
     <p>
       I have a passion for developing full stack web applications with whatever
       technology fits the app. Here's a short portfolio of my favorite work. You
