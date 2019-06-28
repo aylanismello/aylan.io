@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import img from '../images/yo.jpg';
+// import img from '../images/yo.jpg';
 
 const tabs = [
   'Code', 'Music', 'Contact'
@@ -9,7 +9,7 @@ const tabs = [
 const Header = props => (
   <header id="header" style={props.timeout ? { display: 'none' } : {}}>
     <div className="logo">
-      <img src={img} />
+      <img src={'https://res.cloudinary.com/burncartel/image/upload/c_fit,q_70,w_500/v1561453037/aylan.io-profile.jpg'} />
       {/* <span className="icon fa-diamond" /> */}
     </div>
     <div className="content">
