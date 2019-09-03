@@ -62,7 +62,7 @@
 		color: _palette(fg-bold);
 		font-weight: _font(weight-bold);
 		line-height: 1.5;
-		margin: 0 0 (_size(element-margin) * 0.5) 0;
+		// margin: 0 0 (_size(element-margin) * 0.5) 0;
 		text-transform: uppercase;
 		letter-spacing: _font(letter-spacing);
 
@@ -77,7 +77,7 @@
 			width: -webkit-max-content;
 			width: -ms-max-content;
 			width: max-content;
-			padding-bottom: 0.5rem;
+			padding-bottom: 0.1rem;
 			margin: 0 0 (_size(element-margin) * 1) 0;
 		}
 	}
