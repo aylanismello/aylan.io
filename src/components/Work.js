@@ -45,7 +45,7 @@ const Work = ({ article, articleTimeout, imgSrc, close }) => (
       or{' '}
       <a
         target="_blank"
-        href="https://drive.google.com/file/d/1GALkAb_ri5TbhR-0AsHBmkOXqRvC1p5d/view?usp=sharing"
+        href="https://drive.google.com/file/d/1zhzb9OaguxLKn35JWrNZZGb5ELF-nFiG/view?usp=sharing"
       >
         resume
       </a>
