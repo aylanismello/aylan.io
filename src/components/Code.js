@@ -10,32 +10,42 @@ class CodePiece extends React.Component {
   state = {
     showMore: false
   };
-  
+
   render() {
     const {
       title,
-      description,
+      subtitle,
       img,
       href,
       more,
       tech = [],
-      github
+      github,
+      techDetails
     } = this.props;
 
     const { showMore } = this.state;
-    return <div className="CodePiece">
+    return (
+      <div className="CodePiece">
         <div className="CodePiece-headers">
           <div className="CodePiece-title">
             <a href={href} target="_blank">
               <h2 className="major">{title}</h2>
             </a>
-
-            <a href={github} className="CodePiece-github" target="_blank">
-              <Icon iconType="github-white" customText="source" width={30} />
+          </div>
+          <h3>[{subtitle}]</h3>
+          <div className="CodePiece-description">{more}</div>
+          <div className="CodePiece-links">
+            <a href={github} className="CodePiece-link" target="_blank">
+              <Icon
+                iconType="github-white"
+                customText="github"
+                width={30}
+              />
+            </a>
+            <a href={href} className="CodePiece-link" target="_blank">
+              <Icon iconType="laptop" customText="live" width={35} />
             </a>
           </div>
-          <h3>[{description}]</h3>
-          {/* <div>{more}</div> */}
         </div>
         <span className="image main">
           <a href={href} target="_blank">
@@ -43,23 +53,37 @@ class CodePiece extends React.Component {
           </a>
         </span>
 
-        {showMore && <div className="CodePiece-more-info">
+        {showMore && (
+          <div className="CodePiece-more-info">
+            <div className="CodePiece-tech-details">
+              <h3 className="CodePiece-subheader">tech details:</h3>
+              <div className="CodePiece-text-description">{techDetails}</div>
+            </div>
             <div className="CodePiece-made-with">
               <h3 className="CodePiece-subheader">made with:</h3>
               <div className="CodePiece-made-with-icons">
-                {tech.map(icon => <Icon iconType={icon} />)}
+                {tech.map(icon => (
+                  <Icon iconType={icon} />
+                ))}
               </div>
             </div>
-          </div>}
-        <div className="CodePiece-learn-more" onClick={() => this.setState({
+          </div>
+        )}
+        <div
+          className="CodePiece-learn-more"
+          onClick={() =>
+            this.setState({
               showMore: !this.state.showMore
-            })}>
+            })
+          }
+        >
           <img src={showMore ? up : down} />
           <span className="CodePiece-learn-more-text">
             {showMore ? 'less' : 'learn more'}
           </span>
         </div>
-      </div>;
+      </div>
+    );
   }
 }
 
@@ -76,11 +100,16 @@ const Code = ({ article, articleTimeout, imgSrc, close }) => (
       I have a passion for developing full stack web applications with whatever
       technology fits the app. Here's a short portfolio of my favorite work. You
       could also skip ahead to my{' '}
-      <a target="_blank" href="https://www.linkedin.com/in/aylanmello">
+      <a
+        target="_blank"
+        className="Code-major-link"
+        href="https://www.linkedin.com/in/aylanmello"
+      >
         LinkedIn
       </a>{' '}
       or{' '}
       <a
+        className="Code-major-link"
         target="_blank"
         href="https://drive.google.com/file/d/1zhzb9OaguxLKn35JWrNZZGb5ELF-nFiG/view?usp=sharing"
       >
@@ -92,11 +121,20 @@ const Code = ({ article, articleTimeout, imgSrc, close }) => (
     <div className="CodePieces">
       <CodePiece
         title="Burn Cartel"
-        description="Weekly music discovery web app"
+        subtitle="Weekly music discovery web app"
         img={cloudinaryImg('bc')}
         href="http://www.burncartel.com"
         github="https://github.com/aylanismello/bc-web-client"
         more="The home for my music lifestyle brand Burn Cartel: it's the place to discover our latest episodes and learn about great new music from around the world."
+        techDetails={`
+          Burn Cartel is the combination of a few different systems running
+          side by side. At its core is a Sidekiq scraping job on a Rails app, 
+          which everyday scrapes the hottest new releases on Soundcloud.
+
+          The client is a fully responsive ReactJS SPA served on Netlify. 
+          The API, to be  snappy and simple is implemented in ExpressJS. 
+          The database layer is 100% PostgreSQL.
+          `}
         tech={[
           'react-js',
           'rails',
@@ -112,7 +150,7 @@ const Code = ({ article, articleTimeout, imgSrc, close }) => (
       />
       <CodePiece
         title="Min Bark"
-        description="Gatsby Website for German based multimedia artist"
+        subtitle="Gatsby Website for German based multimedia artist"
         img={cloudinaryImg('min-bark')}
         href="http://min-bark.com"
         github="https://github.com/aylanismello/min-bark"
@@ -121,7 +159,7 @@ const Code = ({ article, articleTimeout, imgSrc, close }) => (
       />
       <CodePiece
         title="MashupBot"
-        description="Musical Tool for making Mashups in the Browser"
+        subtitle="Musical Tool for making Mashups in the Browser"
         img={cloudinaryImg('mashupbot')}
         href="http://mashupbot.netlify.com"
         github="https://github.com/aylanismello/mashupbot"
@@ -130,7 +168,7 @@ const Code = ({ article, articleTimeout, imgSrc, close }) => (
       />
       <CodePiece
         title="Bossafy"
-        description="Tool for jazz music composition"
+        subtitle="Tool for jazz music composition"
         img={cloudinaryImg('bossafy')}
         href="http://bossafy.herokuapp.com/"
         github="https://github.com/aylanismello/bossafy"

@@ -50,7 +50,7 @@ const centerFlex = {
 const cloudinarySvg = imageName =>
   `https://res.cloudinary.com/burncartel/image/upload/c_fit,q_70/v1568138570/icons/${imageName}.svg`;
 
-const Icon = ({ iconType, width, customText }) => (
+const Icon = ({ iconType, width, customText, hideText }) => (
   <div
     className="Icon-container"
     style={{ width: `${width}px`, height: `auto` }}
@@ -68,6 +68,7 @@ const Icon = ({ iconType, width, customText }) => (
         }}
       />
     </div>
+    {hideText ? null :
     <div className="Icon-title" style={centerFlex}>
       <span
         className="Icon-title-content"
@@ -76,6 +77,7 @@ const Icon = ({ iconType, width, customText }) => (
         {customText ? customText : iconType}
       </span>
     </div>
+    } 
   </div>
 );
 

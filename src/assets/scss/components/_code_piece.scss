@@ -1,41 +1,83 @@
 // http://grid.malven.co/
+.Code-major-link {
+  color: white;
+  font-weight: 600;
+}
 .CodePieces {
-  .CodePiece:not(:first-child){
+  
+  .CodePiece:not(:first-child) {
     padding-top: 2.8rem;
   }
 
   .CodePiece {
+
+    .CodePiece-description {
+      padding-top: 0.6em;
+    }
     
+
+    .CodePiece-tech-description {
+      line-height: 1.3;
+    }
+    .CodePiece-more-info {
+      padding-bottom: 1.6rem;
+    }
+    .CodePiece-tech-details {
+      padding-bottom: 0.8em;
+    }
+
+    .CodePiece-links {
+      padding-top: 1.2em;
+      display: grid;
+      grid-template-rows: 100%;
+      grid-template-columns: repeat(2, auto);
+      justify-content: start;
+      align-items: center;
+
+      .CodePiece-link {
+        border-bottom: none;
+        &:hover {
+          filter: invert(0.2)
+        }
+      }
+      // align-content: center;
+      .CodePiece-link {
+        // display: inline-block;
+      }
+
+      .CodePiece-link:not(:first-child) {
+        padding-left: 1.4em;
+      }
+    }
+
     .CodePiece-learn-more {
       &:hover {
         cursor: pointer;
       }
     }
     .CodePiece-title {
-      display: flex;
-      justify-content: space-between;
+      // display: flex;
+      // justify-content: space-between;
 
       .CodePiece-github {
         // border: 1px solid red;
       }
-      
     }
 
     .CodePiece-learn-more-text {
-      padding-left: .6em;
+      padding-left: 0.6em;
     }
 
     .CodePiece-subheader {
       padding-bottom: 1.2em;
       text-transform: lowercase;
     }
-    
+
     .CodePiece-made-with-icons {
-      display: grid; 
+      display: grid;
       grid-template-columns: repeat(4, auto);
       justify-items: center;
       grid-row-gap: 1em;
     }
-  } 
-  
+  }
 }
