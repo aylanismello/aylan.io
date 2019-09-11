@@ -1,0 +1,41 @@
+// http://grid.malven.co/
+.CodePieces {
+  .CodePiece:not(:first-child){
+    padding-top: 2.8rem;
+  }
+
+  .CodePiece {
+    
+    .CodePiece-learn-more {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .CodePiece-title {
+      display: flex;
+      justify-content: space-between;
+
+      .CodePiece-github {
+        // border: 1px solid red;
+      }
+      
+    }
+
+    .CodePiece-learn-more-text {
+      padding-left: .6em;
+    }
+
+    .CodePiece-subheader {
+      padding-bottom: 1.2em;
+      text-transform: lowercase;
+    }
+    
+    .CodePiece-made-with-icons {
+      display: grid; 
+      grid-template-columns: repeat(4, auto);
+      justify-items: center;
+      grid-row-gap: 1em;
+    }
+  } 
+  
+}

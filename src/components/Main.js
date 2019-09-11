@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Work from './Work';
+import Code from './Code';
 
 import pic01 from '../images/pic01.jpg';
 import pic02 from '../images/pic02.jpg';
@@ -23,7 +23,7 @@ class Main extends React.Component {
         id="main"
         style={this.props.timeout ? { display: 'flex' } : { display: 'none' }}
       >
-        <Work
+        <Code
           close={close}
           imgSrc={pic02}
           article={this.props.article}
