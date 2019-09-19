@@ -65,7 +65,7 @@ const About = ({ article, articleTimeout, close, handleOpenArticle }) => (
     <h2 className="major">My Skills:</h2>
 
     <SkillSection
-      skills={['js', 'ruby', 'html', 'css', 'python']}
+      skills={['javascript', 'ruby', 'html', 'css', 'python']}
       skillType="languages"
     />
     <SkillSection
