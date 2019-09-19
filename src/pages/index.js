@@ -84,6 +84,13 @@ class Index extends React.Component {
     }
   }
 
+  switchArticle(newArticle) {
+    this.handleCloseArticle();
+    setTimeout(() => {
+      this.handleOpenArticle(newArticle);
+    }, 360)
+  }
+
   render() {
     return (
       <Layout location={this.props.location}>
@@ -99,6 +106,7 @@ class Index extends React.Component {
             />
             <Main
               isArticleVisible={this.state.isArticleVisible}
+              handleOpenArticle={(a) => this.switchArticle(a)}
               timeout={this.state.timeout}
               articleTimeout={this.state.articleTimeout}
               article={this.state.article}

@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import img from '../images/yo.jpg';
 
 const tabs = [
-  'Code', 'Music', 'Contact'
+  'About', 'Work', 'Music', 'Contact'
 ];
 
 const Header = props => (

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Code from './Code';
+import About from './About';
 
 import pic01 from '../images/pic01.jpg';
 import pic02 from '../images/pic02.jpg';
@@ -8,32 +9,48 @@ import pic03 from '../images/pic03.jpg';
 
 class Main extends React.Component {
   render() {
+    const {
+      onCloseArticle,
+      setWrapperRef,
+      article,
+      articleTimeout,
+      timeout,
+      handleOpenArticle
+    } = this.props;
     let close = (
       <div
         className="close"
         onClick={() => {
-          this.props.onCloseArticle();
+          onCloseArticle();
         }}
       />
     );
 
     return (
       <div
-        ref={this.props.setWrapperRef}
+        ref={setWrapperRef}
         id="main"
-        style={this.props.timeout ? { display: 'flex' } : { display: 'none' }}
+        style={timeout ? { display: 'flex' } : { display: 'none' }}
       >
+        <About
+          close={close}
+          article={article}
+          handleOpenArticle={handleOpenArticle}
+          articleTimeout={articleTimeout}
+          />
+
         <Code
           close={close}
+          handleOpenArticle={handleOpenArticle}
           imgSrc={pic02}
-          article={this.props.article}
-          articleTimeout={this.props.articleTimeout}
+          article={article}
+          articleTimeout={articleTimeout}
         />
 
         <article
           id="music"
-          className={`${this.props.article === 'music' ? 'active' : ''} ${
-            this.props.articleTimeout ? 'timeout' : ''
+          className={`${article === 'music' ? 'active' : ''} ${
+            articleTimeout ? 'timeout' : ''
           }`}
           style={{ display: 'none' }}
         >
@@ -85,8 +102,8 @@ class Main extends React.Component {
 
         <article
           id="contact"
-          className={`${this.props.article === 'contact' ? 'active' : ''} ${
-            this.props.articleTimeout ? 'timeout' : ''
+          className={`${article === 'contact' ? 'active' : ''} ${
+            articleTimeout ? 'timeout' : ''
           }`}
           style={{ display: 'none' }}
         >
