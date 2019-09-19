@@ -35,7 +35,7 @@ const About = ({ article, articleTimeout, close, handleOpenArticle }) => (
       there! My name is Aylan Mello and I’m an American web developer and
       musician based out of Lisbon. I have a passion for developing full stack
       web applications with whatever technology fits the app. A full portfolio
-      of my work can be found
+      of my work can be found{' '}
       <a
         className="Code-major-link"
         href="javascript:;"
@@ -71,7 +71,6 @@ const About = ({ article, articleTimeout, close, handleOpenArticle }) => (
     <SkillSection
       skills={[
         'react-js',
-        'ruby',
         'rails',
         'express',
         'gatsby',
@@ -81,11 +80,11 @@ const About = ({ article, articleTimeout, close, handleOpenArticle }) => (
       skillType="frameworks"
     />
     <SkillSection
-      skills={['aws', 'redis', 'git', 'postgresql']}
+      skills={['aws', 'redis', 'postgresql', 'jenkins']}
       skillType="technologies"
     />
 
-    <SkillSection skills={['vscode', 'xd']} skillType="technologies" />
+    <SkillSection skills={['vscode', 'xd', 'iterm2']} skillType="tools" />
 
     {close}
   </article>
