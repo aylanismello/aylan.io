@@ -32,10 +32,10 @@ const About = ({ article, articleTimeout, close, handleOpenArticle }) => (
     </div>
     <p>
       <span style={{ fontSize: '26px', marginRight: '.2rem' }}>👋</span> Hi
-      there! My name is Aylan Mello and I’m a web developer and
-      musician based out of Los Angeles. I have a passion for developing full stack
-      web applications with whatever technology fits the app. A full portfolio
-      of my work can be found{' '}
+      there! My name is Aylan Mello and I’m a web developer and musician based
+      out of Los Angeles. I have a passion for developing full stack web
+      applications with whatever technology fits the app. A full portfolio of my
+      work can be found{' '}
       <a
         className="Code-major-link"
         href="javascript:;"
@@ -47,7 +47,7 @@ const About = ({ article, articleTimeout, close, handleOpenArticle }) => (
       <a
         className="Code-major-link"
         target="_blank"
-        href="https://docs.google.com/document/d/15ZE0S911X6OHJvjYqkwfgfAvpCbxKYOofkU5rKaCy_8/view?usp=sharing"
+        href="https://drive.google.com/file/d/1Ghcga89m_nV8-WQ14zWEXBgQRLOnmbWh/view?usp=sharing"
       >
         resume
       </a>{' '}
@@ -69,14 +69,7 @@ const About = ({ article, articleTimeout, close, handleOpenArticle }) => (
       skillType="languages"
     />
     <SkillSection
-      skills={[
-        'react-js',
-        'rails',
-        'express',
-        'gatsby',
-        'wordpress',
-        'redux'
-      ]}
+      skills={['react-js', 'rails', 'express', 'gatsby', 'wordpress', 'redux']}
       skillType="frameworks"
     />
     <SkillSection
