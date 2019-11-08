@@ -32,8 +32,8 @@ const About = ({ article, articleTimeout, close, handleOpenArticle }) => (
     </div>
     <p>
       <span style={{ fontSize: '26px', marginRight: '.2rem' }}>👋</span> Hi
-      there! My name is Aylan Mello and I’m an American web developer and
-      musician based out of Lisbon. I have a passion for developing full stack
+      there! My name is Aylan Mello and I’m a web developer and
+      musician based out of Los Angeles. I have a passion for developing full stack
       web applications with whatever technology fits the app. A full portfolio
       of my work can be found{' '}
       <a
@@ -47,7 +47,7 @@ const About = ({ article, articleTimeout, close, handleOpenArticle }) => (
       <a
         className="Code-major-link"
         target="_blank"
-        href="https://drive.google.com/file/d/1zhzb9OaguxLKn35JWrNZZGb5ELF-nFiG/view?usp=sharing"
+        href="https://docs.google.com/document/d/15ZE0S911X6OHJvjYqkwfgfAvpCbxKYOofkU5rKaCy_8/view?usp=sharing"
       >
         resume
       </a>{' '}
