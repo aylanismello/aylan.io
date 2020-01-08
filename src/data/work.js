@@ -33,23 +33,37 @@ const code = [
     ]
   },
   {
-    title: 'Min Bark',
-    subtitle: 'Gatsby Website for German based multimedia artist',
-    img: cloudinaryImg('min-bark'),
-    href: 'http://min-bark.com',
-    github: 'https://github.com/aylanismello/min-bark',
+    title: 'State of Alaska Peaks Map',
+    subtitle: 'Visualizing School Performance Statewide in Alaska',
+    img: cloudinaryImg('peaks'),
+    href: ' http://peaks.alaskapolicyforum.org/',
+    github: 'https://github.com/paulmoliva/peaksMap',
     more:
-      'An example of porting an older, slow website running on Wordpress to a modern, React based Static Site Generator',
+      'Making an interactive data visualization experience for the State of Alaska school district',
     techDetails: `
-      The client's main objective was perfromance gains - so moving off of Wordpress was imperative. I still wanted to allow her to update
-      content on her site using the familar Wordpress UI, so a build hook was attached to Wordpress to trigger a rebuild of my new site,
-      coded in the React based Static Site Geneator known as Gatsby.
-      
-      Underneath the hood of the Wordpress CMS lies a standard REST API - when Gatsby is rebuilt and deployed it simply calls here for new data.
-      
+      The client wanted a total rehaul of the old UI, so I went ahead and did a redesign with the ANT UI Component Library. 
+      I used Figma to do the design, and ReactJS to make the frontend.
     `,
-    tech: ['wordpress', 'gatsby', 'netlify']
+    tech: ['aws', 'react-js', 'figma']
   },
+  // {
+  //   title: 'Min Bark',
+  //   subtitle: 'Gatsby Website for German based multimedia artist',
+  //   img: cloudinaryImg('min-bark'),
+  //   href: 'http://min-bark.com',
+  //   github: 'https://github.com/aylanismello/min-bark',
+  //   more:
+  //     'An example of porting an older, slow website running on Wordpress to a modern, React based Static Site Generator',
+  //   techDetails: `
+  //     The client's main objective was perfromance gains - so moving off of Wordpress was imperative. I still wanted to allow her to update
+  //     content on her site using the familar Wordpress UI, so a build hook was attached to Wordpress to trigger a rebuild of my new site,
+  //     coded in the React based Static Site Geneator known as Gatsby.
+
+  //     Underneath the hood of the Wordpress CMS lies a standard REST API - when Gatsby is rebuilt and deployed it simply calls here for new data.
+
+  //   `,
+  //   tech: ['wordpress', 'gatsby', 'netlify']
+  // },
   {
     title: 'MashupBot',
     subtitle: 'Musical Tool for making mashups in the Browser',
