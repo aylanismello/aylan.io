@@ -33,7 +33,7 @@ const code = [
     ]
   },
   {
-    title: 'State of Alaska Peaks Map',
+    title: 'Alaska Peaks Map',
     subtitle: 'Visualizing School Performance Statewide in Alaska',
     img: cloudinaryImg('peaks'),
     href: ' http://peaks.alaskapolicyforum.org/',
